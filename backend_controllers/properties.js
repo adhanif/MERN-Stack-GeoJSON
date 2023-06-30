@@ -29,8 +29,18 @@ const createProperty = async (req, res) => {
     res.status(201).json(data);
   } catch (error) {
     console.log(error);
-    res.status(500).send("Error creating user");
+    res.status(500).send("Error creating property");
   }
 };
 
-module.exports = { createProperty };
+const getAllProperties = async (req, res) => {
+  try {
+    const data = await property.find().populate("owner");
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error retrieving properties");
+  }
+};
+
+module.exports = { createProperty, getAllProperties };

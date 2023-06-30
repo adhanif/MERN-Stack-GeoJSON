@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const user = require("./user");
 const propertySchema = mongoose.Schema({
   title: {
     type: String,
@@ -32,7 +32,7 @@ const propertySchema = mongoose.Schema({
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
+    ref: "Users",
   },
   availability: {
     type: String,
