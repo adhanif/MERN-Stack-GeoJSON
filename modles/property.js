@@ -28,7 +28,7 @@ const propertySchema = mongoose.Schema({
     required: true,
   },
   images: {
-    type: Array,
+    type: [String],
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
@@ -40,8 +40,8 @@ const propertySchema = mongoose.Schema({
     default: "vacant",
   },
   createdAt: {
-    type: Boolean,
-    default: true,
+    type: Date,
+    required: true,
   },
 });
 
