@@ -43,4 +43,15 @@ const getAllProperties = async (req, res) => {
   }
 };
 
-module.exports = { createProperty, getAllProperties };
+const getProperty = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = await property.findById(id).populate("owner");
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error retrieving property");
+  }
+};
+
+module.exports = { createProperty, getAllProperties, getProperty };
