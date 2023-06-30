@@ -34,6 +34,15 @@ const propertySchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
   },
+  availability: {
+    type: String,
+    enum: ["vacant", "rented", "sold"],
+    default: "vacant",
+  },
+  createdAt: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const property = mongoose.model("property", propertySchema);
