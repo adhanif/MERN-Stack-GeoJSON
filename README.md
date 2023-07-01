@@ -1,5 +1,3 @@
-# MERN-Stack-GeoJSON
-
 MERN stack (MongoDB, Express, React, Node.js)
 
 # GOALS
@@ -9,4 +7,5 @@ MERN stack (MongoDB, Express, React, Node.js)
 
 # SPECIFICATIONS
 A real estate application where users can search for properties based on their desired location. Implement mongoose's geo location search to enable users to find properties within a specific area or proximity to certain landmarks.
+
 
