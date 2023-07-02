@@ -10,17 +10,13 @@ function App() {
   return (
     <>
       <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/properties">Properties</NavLink>
+        <NavLink to="/properties">Home</NavLink>
       </nav>
       <Container maxWidth="md">
         <Box sx={{ m: 3 }}>
           <Routes>
-            <Route path="/" />
             <Route path="/properties" element={<Properties />} />
             <Route path="/properties/:id" element={<PropertyDetail />} />
-
-            <Route></Route>
           </Routes>
         </Box>
       </Container>
