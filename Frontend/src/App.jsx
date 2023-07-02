@@ -17,8 +17,6 @@ function App() {
           <Routes>
             <Route path="/properties" element={<Properties />} />
             <Route path="/properties/:id" element={<PropertyDetail />} />
-
-            <Route></Route>
           </Routes>
         </Box>
       </Container>
