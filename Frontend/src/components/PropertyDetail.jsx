@@ -21,28 +21,40 @@ export default function PropertyDetail() {
   }, []);
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+    <div>
+      <Grid container spacing={2} justify="center">
         <Grid item xs={4} justifyContent="center" alignItems="center">
-          <Typography variant="h7">{property.title}</Typography>
-          {/* <Typography variant="body2">{property.owner.name}</Typography> */}
-        </Grid>
-        <Grid item xs={8}>
           <img
             src={`${property.image}?w=248&fit=crop&auto=format`}
             srcSet={`${property.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={property.title}
             loading="lazy"
           />
-          {/* <Typography variant="body1">xs=8</Typography> */}
-        </Grid>
-        <Grid item xs={4}>
-          <Typography variant="body1">xs=4</Typography>
-        </Grid>
-        <Grid item xs={8}>
-          <Typography variant="body1">xs=8</Typography>
         </Grid>
       </Grid>
-    </Box>
+    </div>
+    // <Box sx={{ flexGrow: 1 }}>
+    //   <Grid container spacing={2}>
+    //     <Grid item xs={4} justifyContent="center" alignItems="center">
+    //       <Typography variant="h7">{property.title}</Typography>
+    //       {/* <Typography variant="body2">{property.owner.name}</Typography> */}
+    //     </Grid>
+    //     <Grid item xs={1}>
+    //       <img
+    //         src={`${property.image}?w=248&fit=crop&auto=format`}
+    //         srcSet={`${property.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+    //         alt={property.title}
+    //         loading="lazy"
+    //       />
+    //       {/* <Typography variant="body1">xs=8</Typography> */}
+    //     </Grid>
+    //     <Grid item xs={4}>
+    //       <Typography variant="body1">xs=4</Typography>
+    //     </Grid>
+    //     <Grid item xs={8}>
+    //       <Typography variant="body1">xs=8</Typography>
+    //     </Grid>
+    //   </Grid>
+    // </Box>
   );
 }
