@@ -13,7 +13,7 @@ export default function PropertyDetail() {
     axios
       .get(`http://localhost:3000/properties/${id}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setProperty(res.data);
       })
       .catch((err) => {
