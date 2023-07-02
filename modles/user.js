@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
@@ -18,4 +18,6 @@ const userSchema = mongoose.Schema({
 });
 
 const user = mongoose.model("Users", userSchema);
+// Create the geospatial index for the location field
+// user.collection.createIndex({ location: "2dsphere" });
 module.exports = user;
